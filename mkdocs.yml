@@ -1,5 +1,5 @@
 site_name: BountyForge Docs
-site_description: Payment routing and settlement tooling for Stellar anchors — documentation portal for anchorflow-app, anchorflow-backend and anchorflow-contracts.
+site_description: Open bounties with escrow, review, and payout workflows — documentation portal for bountyforge-app, bountyforge-backend and bountyforge-contracts.
 site_url: https://stellar-bountyforge.github.io/bountyforge-app/
 repo_url: https://github.com/stellar-bountyforge/bountyforge-app
 repo_name: stellar-bountyforge/bountyforge-app
