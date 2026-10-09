@@ -1,0 +1,69 @@
+site_name: BountyForge Docs
+site_description: Payment routing and settlement tooling for Stellar anchors — documentation portal for anchorflow-app, anchorflow-backend and anchorflow-contracts.
+site_url: https://stellar-bountyforge.github.io/bountyforge-app/
+repo_url: https://github.com/stellar-bountyforge/bountyforge-app
+repo_name: stellar-bountyforge/bountyforge-app
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: cyan
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: cyan
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - User Guide: user-guide.md
+  - Developer Guide: developer-guide.md
+  - Backend API: api.md
+  - Smart Contract: contract.md
+  - Configuration: configuration.md
+  - Deployment: deployment.md
+  - Troubleshooting: troubleshooting.md
+  - Security: security.md
+  - FAQ: faq.md
+  - Architecture Notes: ARCHITECTURE.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/stellar-bountyforge
+  generator: false
+
+copyright: Copyright &copy; 2026 BountyForge contributors — Apache-2.0
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - toc:
+      permalink: true

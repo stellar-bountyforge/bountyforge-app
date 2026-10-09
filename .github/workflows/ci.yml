@@ -1,15 +1,40 @@
 name: CI
+
 on:
   push:
+    branches: [main]
   pull_request:
+
 jobs:
   checks:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Validate repository
-        run: |
-          test -f README.md
-          test -f LICENSE
-          test -f SECURITY.md
-          test -f CONTRIBUTING.md
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Test
+        run: npm test
+
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install MkDocs Material
+        run: pip install mkdocs-material
+
+      - name: Build docs (strict, link check)
+        run: mkdocs build --strict --site-dir site

@@ -13,6 +13,8 @@
 
 > **Status note:** v0.1.0 development baseline — **not audited and not production-ready.**
 
+📚 **Documentation site:** [https://stellar-bountyforge.github.io/bountyforge-app/](https://stellar-bountyforge.github.io/bountyforge-app/) — user guide, backend API reference, smart contract guide, configuration and deployment docs. The source lives in [`docs/`](docs/) (MkDocs Material, built with `mkdocs build --strict` in CI).
+
 ## Why this exists
 
 BountyForge implements open bounties with escrow, review, and payout workflows on Stellar. On-chain state is the source of truth; off-chain services stay out of consensus-critical logic. This repository is the **user-facing web application** of the three-repo BountyForge system:
